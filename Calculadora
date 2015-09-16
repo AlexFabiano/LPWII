@@ -1,0 +1,61 @@
+<form action="" mathod="post">
+    Numero 1 <input type="text" name="n1"><br>
+    Numero 2 <input type="text" name="n2"><br><br>
+    Operacao<input type="text" name="operacao"><br>
+    Resultado<input type="text" name="resultado">
+    <br>
+    <input type="submit" value="SOMAR"> <br>
+</form>
+
+<?php
+if (isset($_POST['n1']) && isset($_post['n2']) && isset($_post['operacao'])) {
+    
+    $calc = new calculadora();
+    
+    $calc->setN1($_POST['n1']);
+    $calc->setN2($_POST['n2']);
+    $calc->setOpercao($_POST['operacao']);
+    
+    $resultado = $calc->calcula();
+    echo "Resultado" . $resultado;
+}
+
+class calculadora{
+    
+    public $n1;
+    public $n2;
+    public $operacao;
+    
+    public function setOperacao($operacao){
+        $this->operacao = $operacao;
+    }
+    
+    public  function setN1($var) {
+        $this->n1 = $var;
+        
+    }
+    
+    public function setN2($var) {
+        $this->n2 = $var;
+        
+    }
+    
+   public function calcula (){
+       if($this->operacao == "+") {
+           $resultado = $this->n1 + $this->n2;
+        }    
+        if($this->operacao == "-") {
+           $resultado = $this->n1 - $this->n2;
+           
+       
+   } 
+   
+
+ }
+   
+}
+
+  
+
+?>
+
