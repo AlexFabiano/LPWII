@@ -58,9 +58,4 @@ class Html {
 
 }
 
-
-$html = new Html;
-echo $html->getInicio();
-echo $html->getNovaLinha();
-echo $html->getTexto("Ola Mundo!!", false);
-echo $html->getFim();
+/*parte final no arquivo index.php */
