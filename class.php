@@ -31,9 +31,7 @@ class form extends Html {
     
 }
 
-class Heradar extends Html{
-    
-}
+
 
 
 
